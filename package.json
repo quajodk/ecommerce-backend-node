@@ -1,0 +1,20 @@
+{
+  "name": "ojun-web",
+  "version": "1.0.0",
+  "description": "Ojun Design website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "Quajo Duke",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
