@@ -34,10 +34,10 @@ Router.route("/auth/me/:token").get(logout);
 // products route
 Router.route("/products").post(addProduct);
 Router.route("/products").get(getProducts);
-Router.route("/products/:id").put(editProduct).delete(deleteProduct);
-Router.route("/products/:id").get(getProduct);
 Router.route("/products/category").post(addCategory);
 Router.route("/products/categories").get(getCategories);
+Router.route("/products/:id").get(getProduct);
+Router.route("/products/:id").put(editProduct).delete(deleteProduct);
 
 // cart route
 Router.route("/me/cart?item").post(addItems);

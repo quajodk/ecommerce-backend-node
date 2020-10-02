@@ -135,7 +135,7 @@ exports.getProducts = async (req, res, next) => {
 };
 
 // @desc Get product by id
-// @route GET api/v1/products/:id
+// @route GET api/v1/product/:id
 // @access Public
 exports.getProduct = async (req, res, next) => {
   try {
@@ -215,16 +215,15 @@ exports.addCategory = async (req, res) => {
 };
 
 // @desc Get product categories
-// @route POST api/v1/products/categories
+// @route GET api/v1/products/categories
 // @access Private
 exports.getCategories = async (req, res) => {
   try {
-    const categories = await Category.find({});
-    console.log(categories);
+    const allCategories = await Category.find({});
 
     return res.status(200).json({
       success: true,
-      data: categories,
+      data: allCategories,
     });
   } catch (error) {
     return res.status(500).json({
